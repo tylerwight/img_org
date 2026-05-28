@@ -32,9 +32,11 @@ def find_images(root_folder: str) -> list[Path]:
     return found
 
 def get_date_taken(path):
-    img = Image.open(path)
-    # Extract EXIF data
-    exif_data = img._getexif()
+    try:
+        img = Image.open(path)
+        exif_data = img._getexif()
+    except Exception:
+        return None
     
     if not exif_data:
         return None

@@ -5,7 +5,7 @@ A simple CLI image organizer. It searches a source directory for any and all ima
 ## How to use
 Install:
 ```
-git clone
+git clone https://github.com/tylerwight/img_org
 pip install -r requirements.txt
 ```
 
